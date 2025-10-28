@@ -29,6 +29,6 @@ python3 spawn_children_anomaly.py
 This project was designed and implemented by: Rachel Soubier  
 💫💫💫  
 If you are interested in reading the associated research paper, the link will be provided below when it is finished.  
-### Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence
+**Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence**
 
    
