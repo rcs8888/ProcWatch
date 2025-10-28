@@ -1,6 +1,20 @@
-# ProcWatch
-A tool designed for collecting and analyzing process information with machine learning.
+# ProcWatch👁️‍🗨️
+*A tool designed for collecting and analyzing process information with machine learning.
 
-Welcome to ProcWatch! This project is a work in progress. Here are the initial steps for data collection:
-1. Run "python3 process_collector.py" to begin recording process information.
-2. If using the tool for simulated anomaly detection, scripts are provided. A good starting point is running "python3 spawn_children_anomaly.py" 
+Welcome to ProcWatch! This project is a work in progress.
+
+## Features
+- Real-time process monitoring feature
+- Machine learning based anomaly scoring
+- Heuristic detection layer for suspicious behavior
+- JSON logging
+- Anomaly generation scripts for basic testing
+
+## Usage
+*Once again this is a work in progress. 
+1. Begin recording process information:
+   '''python python3 process_collector.py'''
+2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal:
+   '''python python3 spawn_children_anomaly.py'''
+3. 
+   
