@@ -20,10 +20,22 @@ cd ProcWatch
 ```python
 python3 process_collector.py
 ```
-2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal:
+2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.  
+ For child process spawning/CPU stress:    
 ```python
-python3 spawn_children_anomaly.py
+python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
+```  
+For memory stress:  
+```python
+python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
+
+All options can be customized at runtime.
+3. Stop collector (CTRL + C)  
+4. Save labeled process stream to a CSV file:  
+```python
+python3 prepare_dataset.py
 ```
+Process information will automatically be merged and labeled.
 
 ## Author
 This project was designed and implemented by: Rachel Soubier  
