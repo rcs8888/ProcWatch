@@ -20,7 +20,8 @@ cd ProcWatch
 ```python
 python3 process_collector.py
 ```
-2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.  
+2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.
+  
  For child process spawning/CPU stress:    
 ```python
 python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
@@ -29,6 +30,7 @@ python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
 ```python
 python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
 ```
+  
  All options can be customized at runtime.
    
 3. Stop collector (CTRL + C)  
