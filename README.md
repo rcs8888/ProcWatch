@@ -17,12 +17,17 @@ cd ProcWatch
 ```
 ## Usage
 1. Begin recording process information:
-   ```python
-   python3 process_collector.py
-   ```
+```python
+python3 process_collector.py
+```
 2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal:
-   ```python
-      python3 spawn_children_anomaly.py
-   ```
+```python
+python3 spawn_children_anomaly.py
+```
+
+## Author
+This project was designed and implemented by: Rachel Soubier
+If you are interested in reading the associated research paper, the link will be provided below when it is finished.
+Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence- 
 
    
