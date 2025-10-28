@@ -25,11 +25,12 @@ python3 process_collector.py
 ```python
 python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
 ```  
-For memory stress:  
+ For memory stress:  
 ```python
 python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
 ```
-All options can be customized at runtime.
+ All options can be customized at runtime.
+   
 3. Stop collector (CTRL + C)  
 4. Save labeled process stream to a CSV file:  
 ```python
