@@ -10,31 +10,31 @@ Welcome to ProcWatch! This project is a work in progress. No promises that anyth
 - JSON logging
 - Anomaly generation scripts for basic testing
 
-## Quick start
+## Quick install
 ```bash
 git clone https://github.com/rcs8888/ProcWatch.git
 cd ProcWatch
 ```
 ## Usage
-1. Begin recording process information:
+### Begin recording process information:
 ```python
 python3 process_collector.py
 ```
-2. If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.
+Note: If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.
   
- For child process spawning/CPU stress:    
+### For child process spawning/CPU stress:    
 ```python
 python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
 ```  
- For memory stress:  
+### For memory stress:  
 ```python
 python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
 ```
   
  All options can be customized at runtime.
    
-3. Stop collector (CTRL + C)  
-4. Save labeled process stream to a CSV file:  
+### Stop collector (CTRL + C)  
+### Save labeled process stream to a CSV file:  
 ```python
 python3 prepare_dataset.py
 ```
