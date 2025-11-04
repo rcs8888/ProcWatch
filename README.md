@@ -16,7 +16,7 @@ git clone https://github.com/rcs8888/ProcWatch.git
 cd ProcWatch
 ```
 ## Usage
-### Begin recording process information:
+### Begin recording process information (stop with CTRL + C):
 ```python
 python3 process_collector.py
 ```
@@ -31,9 +31,8 @@ python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
 python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
 ```
   
- All options can be customized at runtime.
-   
-### Stop collector (CTRL + C)  
+ All options can be customized at runtime.  
+ 
 ### Save labeled process stream to a CSV file:  
 ```python
 python3 prepare_dataset.py
