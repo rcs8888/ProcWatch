@@ -4,43 +4,75 @@
 Welcome to ProcWatch! This project is a work in progress. No promises that anything works as intended!
 
 ## Features
-- Real-time process monitoring feature
-- Machine learning based anomaly scoring
-- Heuristic detection layer for suspicious behavior
-- JSON logging
-- Anomaly generation scripts for basic testing
+- Live Process Monitoring: Collects system metrics (CPU, memory usage, etc.) for forensic analysis
+- Anomaly Simulation: Safely triggers controlled CPU and memory spikes, I/O stress, process anomalies, etc.
+- Dataset Preparation: Labels and organzies events and extracts statistical features for ML training
+- Machine Learning Evaluation: Compares a heuristic baseline test and a Random Forest model for anomaly detection accuracy
+- Session-Based Logging: Tracks data based on sessions for distinction and organization
+
+## Requirements  
+Python 3.10+  
+### Install dependencies:
+```bash
+pip install pandas psutil scikit-learn joblib  
+```
 
 ## Quick install
 ```bash
 git clone https://github.com/rcs8888/ProcWatch.git
 cd ProcWatch
 ```
+
 ## Usage
-### Begin recording process information (stop with CTRL + C):
+### 1. Begin recording process information (stop with CTRL + C):
 ```python
-python3 process_collector.py
+python3 process_collector.py --session session_name --interval 1.0
 ```
-Note: If using the tool for simulated anomaly detection/research, scripts are provided. Run in a seperate terminal.
-  
-### For child process spawning/CPU stress:    
+
+### 2. Simulate anomalies (if desired):    
 ```python
-python3 spawn_children_anomaly.py --duration 30 --workers 6 --mode cpu
-```  
-### For memory stress:  
-```python
-python3 spawn_children_anomaly.py --duration 20 --workers 8 --mode mem --mem-mb 150  
+python3 spawn_children_anomaly.py
 ```
+Choose from the menu options to simulate:  
+1. Rapid process creation  
+2. CPU stress  
+3. Memory stress  
+4. Mixed behavior  
+5. Idle baseline  
+6. Exit  
+
+Note: Timestamped logs are located in:  
+```bash
+logs/<session_name>/process_stream.csv
+```
+
   
- All options can be customized at runtime.  
- 
-### Save labeled process stream to a CSV file:  
+### 3. Prepare the dataset:   
+After collecting the desired amount of data (at least 5 minutes is recommended for ML training), run:
 ```python
 python3 prepare_dataset.py
 ```
-Process information will automatically be merged and labeled.
+Process metrics and logs are automatically merged and labeled. A clean, readable CSV is outputted:  
+```bash
+logs/<session_name>/anomaly_events.csv  
+logs/<session_name>/labeled_dataset.csv
+```
+
+### 4. Train and evaluate ML model:  
+Train a Random Forest classifier and compare against the heuristic detector.  
+```python
+python3 train_eval.py
+```
+This also prints precision, recall, F1, and a confusion matrix for the heuristic and ML scores.  
+
+### Work-in-progress steps:
+I aim to do (at least) the following:  
+- Add more anomaly types, possibly evasive malware indicators such as process injection/hollowing
+- Add a web-based dashboard for visualization, including graphs
 
 ## Author
-This project was designed and implemented by: Rachel Soubier  
+This project was designed and implemented by: Rachel Soubier.  
+The latest update to this project was: 11/10/2025  
 💫💫💫  
 If you are interested in reading the associated research paper, the link will be provided below when it is finished.  
 **Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence**
