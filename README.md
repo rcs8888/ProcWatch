@@ -71,7 +71,9 @@ I aim to do (at least) the following:
 - Add a web-based dashboard for visualization, including graphs
 
 ## Author
-This project was designed and implemented by: Rachel Soubier.  
+Copyright (c) 2025 Rachel Catherine Soubier. All rights reserved.  
+This code is not public. Contact rcs2002@uncw.edu for collaboration requests.  
+  
 The latest update to this project was: 11/10/2025  
 💫💫💫  
 If you are interested in reading the associated research paper, the link will be provided below when it is finished.  
