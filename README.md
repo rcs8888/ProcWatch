@@ -14,7 +14,7 @@ Welcome to ProcWatch! This project is a work in progress. No promises that anyth
 Python 3.10+  
 ### Install dependencies:
 ```bash
-pip install pandas psutil scikit-learn joblib  
+pip install pandas psutil scikit-learn joblib stress-ng  
 ```
 
 ## Quick install
