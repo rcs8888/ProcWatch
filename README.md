@@ -1,7 +1,7 @@
 # ProcWatch👁️‍🗨️
 *A tool designed for collecting and analyzing process information with machine learning.*
 
-Welcome to ProcWatch! This project is a work in progress. No promises that anything works as intended!
+Welcome to ProcWatch! This project is a work in progress.
 
 ## Features
 - Live Process Monitoring: Collects system metrics (CPU, memory usage, etc.) for forensic analysis
