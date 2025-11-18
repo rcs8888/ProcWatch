@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-train_eval.py (improved)
+train_eval.py
 ------------------------
 Trains and evaluates a Random Forest classifier (and a tunable heuristic baseline)
 for detecting anomalous process samples from labeled_dataset.csv.
