@@ -74,7 +74,7 @@ I aim to do (at least) the following:
 Copyright (c) 2025 Rachel Catherine Soubier. All rights reserved.  
 This code is not public. Contact rcs2002@uncw.edu for collaboration requests.  
   
-The latest update to this project was: 11/10/2025  
+The latest update to this project was: 11/17/2025  
 💫💫💫  
 If you are interested in reading the associated research paper, the link will be provided below when it is finished.  
 **Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence**
