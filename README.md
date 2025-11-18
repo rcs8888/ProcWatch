@@ -34,11 +34,11 @@ python3 process_collector.py --session session_name --interval 1.0
 python3 spawn_children_anomaly.py
 ```
 Choose from the menu options to simulate:  
-1. Rapid process creation  
-2. CPU stress  
+1. Baseline process spawning  
+2. CPU stress    
 3. Memory stress  
-4. Mixed behavior  
-5. Idle baseline  
+4. I/O stress  
+5. Mixed stress  
 6. Exit  
 
 Note: Timestamped logs are located in:  
