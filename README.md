@@ -31,7 +31,7 @@ python3 process_collector.py --session session_name --interval 1.0
 
 ### 2. Simulate anomalies (if desired):    
 ```python
-python3 spawn_children_anomaly.py
+python3 spawn_children_anomaly.py --session session_name
 ```
 Choose from the menu options to simulate:  
 1. Baseline process spawning  
@@ -51,8 +51,8 @@ logs/<session_name>/process_stream.csv
 After collecting the desired amount of data (at least 5 minutes is recommended for ML training), run:
 ```python
 python3 prepare_dataset.py
-```
-Process metrics and logs are automatically merged and labeled. A clean, readable CSV is outputted:  
+```  
+Enter the session name when prompted. Process metrics and logs are automatically merged and labeled. A clean, readable CSV is outputted:  
 ```bash
 logs/<session_name>/anomaly_events.csv  
 logs/<session_name>/labeled_dataset.csv
