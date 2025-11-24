@@ -26,20 +26,24 @@ cd ProcWatch
 ## Usage
 ### 1. Begin recording process information (stop with CTRL + C):
 ```python
-python3 process_collector.py --session session_name --interval 1.0
+python3 process_collector.py --session session_name
 ```
 
 ### 2. Simulate anomalies (if desired):    
 ```python
-python3 spawn_children_anomaly.py --session session_name
+python3 spawn_process_2.py --session session_name
 ```
 Choose from the menu options to simulate:  
-1. Baseline process spawning  
-2. CPU stress    
-3. Memory stress  
-4. I/O stress  
-5. Mixed stress  
-6. Exit  
+1. Normal background (benign, 30s) 
+2. CPU anomaly
+3. CPU anomaly (gradual escalation)  
+4. Memory anomaly
+5. I/O anomaly
+6. Network anomaly
+7. File descriptor leak
+8. Fork bomb light
+9. Mixed anomaly 
+10. Quit 
 
 Note: Timestamped logs are located in:  
 ```bash
@@ -50,9 +54,9 @@ logs/<session_name>/process_stream.csv
 ### 3. Prepare the dataset:   
 After collecting the desired amount of data (at least 5 minutes is recommended for ML training), run:
 ```python
-python3 prepare_dataset.py
+python3 prepare_dataset.py --session session_name
 ```  
-Enter the session name when prompted. Process metrics and logs are automatically merged and labeled. A clean, readable CSV is outputted:  
+Process metrics and logs are automatically merged and labeled. A clean, readable CSV is outputted:  
 ```bash
 logs/<session_name>/anomaly_events.csv  
 logs/<session_name>/labeled_dataset.csv
@@ -67,14 +71,13 @@ This also prints precision, recall, F1, and a confusion matrix for the heuristic
 
 ### Work-in-progress steps:
 I aim to do (at least) the following:  
-- Add more anomaly types, possibly evasive malware indicators such as process injection/hollowing
 - Add a web-based dashboard for visualization, including graphs
 
 ## Author
 Copyright (c) 2025 Rachel Catherine Soubier. All rights reserved.  
 This code is not public. Contact rcs2002@uncw.edu for collaboration requests.  
   
-The latest update to this project was: 11/17/2025  
+The latest update to this project was: 11/23/2025  
 💫💫💫  
 If you are interested in reading the associated research paper, the link will be provided below when it is finished.  
 **Post-Exploitation Malware Analysis: Leveraging Memory Forensics and Machine Learning for Real-Time Threat Intelligence**
