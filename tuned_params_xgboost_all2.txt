@@ -1,0 +1,14 @@
+Best ROC-AUC: 0.8749
+Test ROC-AUC: 0.8780
+
+Best parameters:
+n_estimators: 731
+max_depth: 12
+learning_rate: 0.08629969099319279
+subsample: 0.9348323826941092
+colsample_bytree: 0.7898511898530559
+colsample_bylevel: 0.7594486947290897
+min_child_weight: 1
+gamma: 0.23944557802645997
+reg_alpha: 0.07671627229441166
+reg_lambda: 1.4128544616406837
